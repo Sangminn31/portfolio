@@ -1,0 +1,71 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+<!--portfolio by Sangmin Hwang (301272384) June 09, 2023-->
+
+    <main class="container">
+        <div class="jumbotron">
+            <hr style="border-style:solid; border-color:#d3d3d3; border-width:2px;">
+          <h2>Social Media:</h2>
+    
+            <th><p><i class="fab fa-lg fa-instagram"></i> Instagram:<a href= "https://www.instagram.com/31_minn/" target="_blank"> <b>@31_minn </a></b></p></th>
+            <p><i class="fab fa-lg fa-git"></i> Github: <a href= "https://github.com/sangminn31" target="_blank"><b>sangminn31</a></b></p>
+            <br>
+            <h2>You can leave your contact information</h2>
+           <div class="form-container">
+            
+            <form method="POST" action="/contact" onsubmit="return redirectToHome()">
+              <div class="form-container">
+                  <div class="form-field">
+                      <label for="fnameinput">First Name: </label>
+                      <input type="text" id="fnameinput" name="fname"/>
+                  </div>
+          
+                  <div class="form-field">
+                      <label for="lnameinput">Last Name: </label>
+                      <input type="text" id="lnameinput" name="lname"/>
+                  </div>
+          
+                  <div class="form-field">
+                      <label for="contactinput">Contact Number: </label>
+                      <input type="text" id="contactinput" name="contact"/>
+                  </div>
+          
+                  <div class="form-field">
+                      <label for="emailinput">Email: </label>
+                      <input type="email" id="emailinput" name="email"/>
+                  </div>
+          
+                  <div class="form-field">
+                      <label for="messageinput">Message: </label>
+                      <textarea id="messageinput" name="message"></textarea>
+                  </div>
+          
+                  <div class="form-field">
+                      <input type="submit" value="SUBMIT"/>
+                      <input type="reset" id="reset" class="button1" value="RESET" />
+                  </div>
+              </div>
+          </form>
+          
+          <script>
+              function redirectToHome() {
+                  // Optionally, you can handle the form data here
+          
+                  // Redirect to home page
+                  window.location.href = "/";
+                  
+                  // Prevent form submission
+                  return false;
+              }
+          </script>
+    
+        </div>
+      </main>
+    
+
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>
+
+
+
+   
